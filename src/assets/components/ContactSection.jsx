@@ -47,7 +47,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="py-12 px-6 md:px-12 bg-gray-50" id="contact">
+    <div className="py-12 px-6 md:px-12 bg-gray-50" id="contacts">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
         {/* Left - Heading + Info */}
         <motion.div
@@ -70,11 +70,16 @@ const ContactSection = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-4 text-gray-700">
               <Mail className="w-5 h-5 text-orange-400" />
-              <span>contactwithbinisha@email.com</span>
+              <a href="mailto:contactwithbinisha@gmail.com">
+                <span>contactwithbinisha@email.com</span>
+              </a>
             </div>
             <div className="flex items-center space-x-4 text-gray-700">
               <Phone className="w-5 h-5 text-orange-400" />
-              <span>+977 9802973937</span>
+              <a href="tel:+977 9802973937">
+                {" "}
+                <span>+977 9802973937</span>
+              </a>
             </div>
             <div className="flex items-center space-x-4 text-gray-700">
               <MapPin className="w-5 h-5 text-orange-400" />

@@ -52,11 +52,11 @@ const Header = () => {
   }, [isOpen]);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contacts" },
   ];
 
   return (
@@ -119,7 +119,7 @@ const Header = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <a href="#contact">Contact Me</a>
+              <a href="#contacts">Contact Me</a>
             </motion.button>
 
             {/* Mobile/Tablet Menu Button */}
