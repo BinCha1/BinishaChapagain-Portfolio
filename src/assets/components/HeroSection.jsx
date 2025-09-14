@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div
       className="relative px-4 sm:px-6 md:px-12 pb-12 sm:pb-20 lg:mt-32 mt-22"
-      id="about"
+      id="home"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
