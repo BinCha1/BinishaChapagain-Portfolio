@@ -17,8 +17,9 @@ const ServicesStrip = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.6 }}
       className="bg-orange-400 py-4 sm:py-4 md:py-4 overflow-hidden"
+      
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10">
           {services.map((service, index) => (
             <React.Fragment key={service.name}>

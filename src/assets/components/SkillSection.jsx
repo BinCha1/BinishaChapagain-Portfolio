@@ -59,7 +59,7 @@ const SkillSection = () => {
   const [active, setActive] = useState(2); // Default active category
 
   return (
-    <div className="py-12 px-6 md:px-12  text-white bg-gray-50">
+    <div className="py-12 px-6 md:px-12  text-white bg-gray-50" id="skills">
       {/* Heading */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}

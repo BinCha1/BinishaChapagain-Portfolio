@@ -57,6 +57,7 @@ const Header = () => {
     { name: "Services", href: "#services" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -119,7 +120,7 @@ const Header = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
             >
-              Contact Me
+              <a href="#contact">Contact Me</a>
             </motion.button>
 
             {/* Mobile/Tablet Menu Button */}
@@ -195,7 +196,7 @@ const Header = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Contact Me
+                  <a href="#contact">Contact Me</a>
                 </motion.button>
               </div>
             </motion.div>
