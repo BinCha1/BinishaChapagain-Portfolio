@@ -2,6 +2,7 @@
 // import PortfolioClone from "./assets/components/PortfolioClone";
 
 import ContactSection from "./assets/components/ContactSection";
+import ExperienceSection from "./assets/components/ExperienceSection";
 import Headers from "./assets/components/Header";
 import HeroSection from "./assets/components/HeroSection";
 import ProjectSection from "./assets/components/ProjectSection";
@@ -19,6 +20,7 @@ function App() {
       <ServicesStrip />
       <ServicesSection />
       <SkillSection />
+      <ExperienceSection />
       <ProjectSection />
       <ContactSection />
       {/* <Footer /> */}

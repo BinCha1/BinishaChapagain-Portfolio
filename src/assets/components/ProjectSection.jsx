@@ -9,18 +9,18 @@ const ProjectSection = () => {
       title: "E-Commerce Platform",
       description:
         "A full-stack online shopping site with secure payment integration and responsive UI.",
-      image: "https://source.unsplash.com/600x400/?ecommerce,website",
-      github: "https://github.com/yourusername/ecommerce",
-      demo: "https://ecommerce-demo.com",
+      image: "namunapic.png",
+      github: "https://github.com/ArunPandeyLaudari/Namuna-Bakery-Hub",
+      demo: "https://www.namunabakery.com/",
     },
-    {
-      title: "School Management System",
-      description:
-        "Admin panel for managing students, teachers, classes, and exams in a centralized platform.",
-      image: "https://source.unsplash.com/600x400/?school,management",
-      github: "https://github.com/yourusername/school-system",
-      demo: "#",
-    },
+    // {
+    //   title: "School Management System",
+    //   description:
+    //     "Admin panel for managing students, teachers, classes, and exams in a centralized platform.",
+    //   image: "https://source.unsplash.com/600x400/?school,management",
+    //   github: "https://github.com/yourusername/school-system",
+    //   demo: "#",
+    // },
     {
       title: "AI Chatbot",
       description:
@@ -33,9 +33,9 @@ const ProjectSection = () => {
       title: "Portfolio Website",
       description:
         "Personal portfolio designed with React.js and Tailwind CSS for clean and modern UI.",
-      image: "https://source.unsplash.com/600x400/?portfolio,website",
-      github: "https://github.com/yourusername/portfolio",
-      demo: "#",
+      image: "public/portfolio.png",
+      github: "https://github.com/BinCha1/BinishaChapagain-Portfolio",
+      demo: "https://binisha-chapagain-portfolio.vercel.app/",
     },
     {
       title: "Book Recommendation System",
@@ -45,30 +45,30 @@ const ProjectSection = () => {
       github: "https://github.com/yourusername/book-recommendation",
       demo: "#",
     },
-    {
-      title: "Barber Shop Website",
-      description:
-        "Booking platform for haircuts and grooming with an admin dashboard.",
-      image: "https://source.unsplash.com/600x400/?barber,shop",
-      github: "https://github.com/yourusername/barber-shop",
-      demo: "#",
-    },
-    {
-      title: "Data Visualization Dashboard",
-      description:
-        "Interactive dashboard for analytics built with React and Chart libraries.",
-      image: "https://source.unsplash.com/600x400/?dashboard,data",
-      github: "https://github.com/yourusername/data-dashboard",
-      demo: "#",
-    },
-    {
-      title: "Kiddo Bazar",
-      description:
-        "An online store for kids’ products and toys with cart and payment system.",
-      image: "https://source.unsplash.com/600x400/?kids,toys",
-      github: "https://github.com/yourusername/kiddo-bazar",
-      demo: "#",
-    },
+    // {
+    //   title: "Barber Shop Website",
+    //   description:
+    //     "Booking platform for haircuts and grooming with an admin dashboard.",
+    //   image: "https://source.unsplash.com/600x400/?barber,shop",
+    //   github: "https://github.com/yourusername/barber-shop",
+    //   demo: "#",
+    // },
+    // {
+    //   title: "Data Visualization Dashboard",
+    //   description:
+    //     "Interactive dashboard for analytics built with React and Chart libraries.",
+    //   image: "https://source.unsplash.com/600x400/?dashboard,data",
+    //   github: "https://github.com/yourusername/data-dashboard",
+    //   demo: "#",
+    // },
+    // {
+    //   title: "Kiddo Bazar",
+    //   description:
+    //     "An online store for kids’ products and toys with cart and payment system.",
+    //   image: "https://source.unsplash.com/600x400/?kids,toys",
+    //   github: "https://github.com/yourusername/kiddo-bazar",
+    //   demo: "#",
+    // },
   ];
 
   const [visibleCount, setVisibleCount] = useState(6);

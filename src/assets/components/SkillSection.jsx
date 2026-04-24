@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Code, Database, Languages, Wrench } from "lucide-react";
+import { Brain, Code, Database, Wrench } from "lucide-react";
 import { useState } from "react";
 
 const SkillSection = () => {
@@ -8,30 +8,30 @@ const SkillSection = () => {
       name: "LLMs & Applied AI",
       icon: Brain,
       skills: [
-        { name: "LangChain", level: 90 },
-        { name: "LangGraph", level: 80 },
-        { name: "Agents", level: 85 },
+        { name: "LangChain", level: 60 },
+        { name: "LangGraph", level: 65 },
+        { name: "Agents", level: 60 },
       ],
     },
-    {
-      name: "Natural Language Processing",
-      icon: Languages,
-      skills: [
-        { name: "Text Classification", level: 85 },
-        { name: "NER", level: 75 },
-        { name: "Transformers", level: 80 },
-      ],
-    },
+    // {
+    //   name: "Natural Language Processing",
+    //   icon: Languages,
+    //   skills: [
+    //     { name: "Text Classification", level: 85 },
+    //     { name: "NER", level: 75 },
+    //     // { name: "Transformers", level: 80 },
+    //   ],
+    // },
     {
       name: "Backend Engineering",
       icon: Database,
       skills: [
-        { name: "FastAPI", level: 95 },
-        { name: "PostgreSQL + Alembic", level: 90 },
-        { name: "Redis", level: 75 },
-        { name: "Celery (Async Tasks)", level: 70 },
-        { name: "Docker & Docker Compose", level: 60 },
-        { name: "REST API Design", level: 85 },
+        // { name: "FastAPI", level: 95 },
+        { name: "PostgreSQL", level: 70 },
+        { name: "MySQL", level: 80 },
+
+        // { name: "Docker & Docker Compose", level: 60 },
+        // { name: "REST API Design", level: 85 },
       ],
     },
     {
@@ -39,8 +39,7 @@ const SkillSection = () => {
       icon: Code,
       skills: [
         { name: "Python", level: 95 },
-        { name: "JavaScript", level: 85 },
-        { name: "SQL", level: 80 },
+        { name: "JavaScript", level: 70 },
         { name: "Pandas", level: 75 },
       ],
     },
@@ -50,8 +49,8 @@ const SkillSection = () => {
       skills: [
         { name: "Git & GitHub", level: 90 },
         { name: "VS Code", level: 85 },
-        { name: "Postman", level: 80 },
-        { name: "Docker", level: 70 },
+        // { name: "Postman", level: 80 },
+        { name: "Docker", level: 50 },
       ],
     },
   ];

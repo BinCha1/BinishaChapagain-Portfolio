@@ -42,7 +42,8 @@ const HeroSection = () => {
                 I'm <span className="text-orange-400">Binisha Chapagain</span>,
               </h1>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Full Stack Developer
+                AI/ML Engineer & Full Stack Developer building intelligent,
+                scalable systems
               </h2>
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Based in Nepal.
