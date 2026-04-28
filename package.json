@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://binishachapagain.com.np",
   "scripts": {
     "dev": "bun run vite",
     "build": "bun run vite build",

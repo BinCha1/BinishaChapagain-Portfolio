@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import binisha from "../../../public/binisha.jpg";
-import BinishaCV from "../../../public/BinishaCV.pdf";
 
 // Hero Section Component
 const HeroSection = () => {
@@ -70,7 +68,7 @@ const HeroSection = () => {
             >
               {/* Download CV Button */}
               <div className="flex justify-center md:justify-start mt-6">
-                <a href={BinishaCV} download>
+                <a href="/BinishaCV.pdf" download>
                   <button className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-3 rounded-full flex items-center space-x-2 transition-all transform hover:scale-105">
                     <Download className="w-5 h-5" />
                     <span className="font-medium">Download CV</span>
@@ -100,7 +98,7 @@ const HeroSection = () => {
                 <div className="absolute inset-4 bg-white rounded-full flex items-center justify-center overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
                     <img
-                      src={binisha}
+                      src="/binisha.jpg"
                       alt="Binisha"
                       className="w-full h-full object-cover"
                     />
