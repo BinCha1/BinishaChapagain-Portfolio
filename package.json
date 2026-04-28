@@ -7,9 +7,7 @@
   "scripts": {
     "dev": "bun run vite",
     "build": "bun run vite build",
-    "preview": "bun run vite preview",
-    "predeploy": "bun run build",
-    "deploy": "bunx gh-pages -d dist"
+    "preview": "bun run vite preview"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
