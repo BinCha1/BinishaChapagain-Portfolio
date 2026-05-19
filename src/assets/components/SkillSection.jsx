@@ -11,6 +11,7 @@ const SkillSection = () => {
         { name: "LangChain", level: 60 },
         { name: "LangGraph", level: 65 },
         { name: "Agents", level: 60 },
+        { name: "Google ADK", level: 70 },
       ],
     },
     // {
@@ -29,6 +30,8 @@ const SkillSection = () => {
         // { name: "FastAPI", level: 95 },
         { name: "PostgreSQL", level: 70 },
         { name: "MySQL", level: 80 },
+        { name: "Elasticsearch", level: 65 },
+        { name: "Qdrant (Vector DB)", level: 60 },
 
         // { name: "Docker & Docker Compose", level: 60 },
         // { name: "REST API Design", level: 85 },
@@ -41,6 +44,10 @@ const SkillSection = () => {
         { name: "Python", level: 95 },
         { name: "JavaScript", level: 70 },
         { name: "Pandas", level: 75 },
+        { name: "Django", level: 70 },
+        { name: "FastAPI", level: 76 },
+        { name: "NumPy", level: 80 },
+        { name: "Matplotlib & Seaborn", level: 65 },
       ],
     },
     {
@@ -51,6 +58,11 @@ const SkillSection = () => {
         { name: "VS Code", level: 85 },
         // { name: "Postman", level: 80 },
         { name: "Docker", level: 50 },
+        {
+          name: "Thunder Client",
+          level: 60,
+        },
+        { name: "PostMan", level: 65 },
       ],
     },
   ];

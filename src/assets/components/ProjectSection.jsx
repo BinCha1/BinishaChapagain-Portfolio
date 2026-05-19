@@ -8,7 +8,7 @@ const ProjectSection = () => {
     {
       title: "E-Commerce Platform",
       description:
-        "A full-stack online shopping site with secure payment integration and responsive UI.",
+        "A bakery e-commerce platform for browsing and ordering handcrafted cakes, featuring product listings, category filtering, and a responsive online shopping experience.",
       image: "namunapic.png",
       github: "https://github.com/ArunPandeyLaudari/Namuna-Bakery-Hub",
       demo: "https://www.namunabakery.com/",
@@ -22,27 +22,28 @@ const ProjectSection = () => {
     //   demo: "#",
     // },
     {
-      title: "AI Chatbot",
+      title: "Multi-Document AI Chatbot",
       description:
-        "A chatbot powered by NLP and deep learning models to provide intelligent responses.",
-      image: "https://source.unsplash.com/600x400/?ai,chatbot",
-      github: "https://github.com/yourusername/ai-chatbot",
+        "AI-powered chatbot that analyzes and answers questions from multiple documents using embeddings and vector search for context-aware responses.",
+      image: "chatbot.jpg",
+      github: "https://github.com/BinCha1/MultiDoc_Chatbot",
       demo: "#",
     },
     {
-      title: "Portfolio Website",
+      title: "Rural Health AI System (Collaborative Project)",
       description:
-        "Personal portfolio designed with React.js and Tailwind CSS for clean and modern UI.",
-      image: "public/portfolio.png",
-      github: "https://github.com/BinCha1/BinishaChapagain-Portfolio",
-      demo: "https://binisha-chapagain-portfolio.vercel.app/",
+        "AI-powered rural healthcare platform with agentic RAG medical assistant and smart appointment prioritization.",
+      image: "rural.jpg",
+      github:
+        "https://github.com/KodewithArun/Rural-Health-AI-Smart-Healthcare-Solutions",
+      demo: "",
     },
     {
       title: "Book Recommendation System",
       description:
-        "ML-powered recommendation engine using collaborative filtering and visualization.",
-      image: "https://source.unsplash.com/600x400/?books,library",
-      github: "https://github.com/yourusername/book-recommendation",
+        "ML-based recommendation system that suggests books using collaborative filtering and user preference patterns.",
+      image: "book.jpg",
+      github: "https://github.com/BinCha1/Book-Recommendation-System",
       demo: "#",
     },
     // {

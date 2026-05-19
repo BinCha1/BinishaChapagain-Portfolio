@@ -1,53 +1,121 @@
-import emailjs from "emailjs-com";
-import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  AlertCircle,
+  CheckCircle,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  X,
+} from "lucide-react";
+import { useRef, useState } from "react";
 
 const ContactSection = () => {
   const formRef = useRef();
 
-  const sendEmail = (e) => {
+  // State to manage our custom popup notification
+  const [notification, setNotification] = useState({
+    show: false,
+    type: "success", // "success" or "error"
+    message: "",
+  });
+
+  // Helper function to trigger the popup
+  const showPopup = (type, message) => {
+    setNotification({ show: true, type, message });
+    // Automatically hide after 4 seconds
+    setTimeout(() => {
+      setNotification((prev) => ({ ...prev, show: false }));
+    }, 4000);
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
+    const form = formRef.current;
 
-    // Send to your own email
-    emailjs
-      .sendForm(
-        "service_2tzmxwi", // Your service ID
-        "template_wld1a1n", // Your email to self
-        formRef.current,
-        "9lzo0OS4ZFxWB-90p" // Your public key
-      )
-      .then((result) => {
-        console.log("Email sent:", result.text);
+    const formData = new FormData(form);
+    const userName = formData.get("user_name");
+    const userEmail = formData.get("user_email");
+    const messageContent = formData.get("message");
 
-        // After successful send, trigger auto-reply
-        const form = formRef.current;
-        const userName = form["user_name"].value;
-        const userEmail = form["user_email"].value;
-        const userMessage = form["message"].value;
+    try {
+      // 1. Send email to YOU
+      await emailjs.sendForm(
+        "service_2tzmxwi",
+        "template_wld1a1n",
+        form,
+        "9lzo0OS4ZFxWB-90p",
+      );
 
-        emailjs.send(
-          "service_2tzmxwi", // Same service ID
-          "template_pvw2f1f", // Your auto-reply template
-          {
-            to_name: userName,
-            to_email: userEmail,
-            message: userMessage,
-          },
-          "9lzo0OS4ZFxWB-90p"
-        );
+      // 2. Auto-reply to USER
+      await emailjs.send(
+        "service_2tzmxwi",
+        "template_pvw2f1f",
+        {
+          to_name: userName,
+          to_email: userEmail,
+          message: messageContent,
+        },
+        "9lzo0OS4ZFxWB-90p",
+      );
 
-        alert("Message sent successfully!");
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("Email error:", error.text);
-        alert("Failed to send message. Please try again.");
-      });
+      // Trigger success popup
+      showPopup(
+        "success",
+        "Message sent successfully! I will get back to you soon.",
+      );
+      form.reset();
+    } catch (error) {
+      console.error("Email error:", error);
+      // Trigger error popup
+      showPopup("error", "Failed to send message. Please try again later.");
+    }
   };
 
   return (
-    <div className="py-12 px-6 md:px-12 bg-gray-50" id="contacts">
+    <div
+      className="py-12 px-6 md:px-12 from-orange-400 to-orange-500 relative"
+      id="contacts"
+    >
+      {/* --- FLOATING POPUP NOTIFICATION --- */}
+      <AnimatePresence>
+        {notification.show && (
+          <motion.div
+            initial={{ opacity: 0, y: 100, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            className="fixed bottom-6 right-6 z-50 flex items-center space-x-3 bg-white shadow-2xl rounded-xl p-4 border border-gray-100 max-w-sm w-[90vw] md:w-auto"
+          >
+            {notification.type === "success" ? (
+              <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0" />
+            ) : (
+              <AlertCircle className="w-6 h-6 text-rose-500 flex-shrink-0" />
+            )}
+
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-gray-900">
+                {notification.type === "success" ? "Success!" : "Error"}
+              </p>
+              <p className="text-xs text-gray-500 mt-0.5">
+                {notification.message}
+              </p>
+            </div>
+
+            <button
+              onClick={() =>
+                setNotification((prev) => ({ ...prev, show: false }))
+              }
+              className="text-gray-400 hover:text-gray-600 transition p-1 rounded-lg hover:bg-gray-50"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
         {/* Left - Heading + Info */}
         <motion.div
@@ -71,14 +139,14 @@ const ContactSection = () => {
             <div className="flex items-center space-x-4 text-gray-700">
               <Mail className="w-5 h-5 text-orange-400" />
               <a href="mailto:contactwithbinisha@gmail.com">
-                <span>contactwithbinisha@email.com</span>
+                <span>contactwithbinisha@gmail.com</span>
               </a>
             </div>
             <div className="flex items-center space-x-4 text-gray-700">
               <Phone className="w-5 h-5 text-orange-400" />
-              <a href="tel:+977 9802973937">
+              <a href="tel:+9779802973937">
                 {" "}
-                <span>+977 9802973937</span>
+                <span>9802973937</span>
               </a>
             </div>
             <div className="flex items-center space-x-4 text-gray-700">

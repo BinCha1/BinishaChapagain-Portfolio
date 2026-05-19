@@ -36,16 +36,20 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="space-y-2"
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                I'm <span className="text-orange-400">Binisha Chapagain</span>,
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                Hi, I'm{" "}
+                <span className="text-orange-400">Binisha Chapagain</span>
               </h1>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                AI/ML Engineer & Full Stack Developer building intelligent,
-                scalable systems
+
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mt-2">
+                AI/ML Engineer & Full-Stack Developer
               </h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Based in Nepal.
-              </h3>
+
+              <p className="text-base sm:text-lg text-gray-600 mt-3 max-w-xl">
+                Focused on developing data-driven applications and robust
+                backend systems using machine learning and modern web
+                technologies. Based in Nepal.
+              </p>
             </motion.div>
 
             {/* Description */}
@@ -53,10 +57,10 @@ const HeroSection = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-gray-600 text-base sm:text-lg max-w-md sm:max-w-lg leading-relaxed"
+              className="text-base sm:text-lg italic text-gray-600 mt-3 max-w-xl"
             >
-              Full-Stack Developer & AI/ML enthusiast passionate about building
-              smart and scalable solutions.
+              “Full-Stack Developer and AI/ML enthusiast crafting intelligent,
+              scalable solutions.”
             </motion.p>
 
             {/* Buttons */}
@@ -68,7 +72,7 @@ const HeroSection = () => {
             >
               {/* Download CV Button */}
               <div className="flex justify-center md:justify-start mt-6">
-                <a href="/BinishaCV.pdf" download>
+                <a href="/BinishaChapagain-Resume.pdf" download>
                   <button className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-3 rounded-full flex items-center space-x-2 transition-all transform hover:scale-105">
                     <Download className="w-5 h-5" />
                     <span className="font-medium">Download CV</span>
@@ -89,21 +93,28 @@ const HeroSection = () => {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative lg:ml-auto mt-10 lg:mt-0"
+            className="relative lg:ml-auto mt-10 lg:mt-0 flex justify-center"
           >
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto">
-              {/* Profile Circle */}
-              <div className="w-full h-full bg-orange-400 rounded-full relative">
-                {/* Inner Circle for Image */}
-                <div className="absolute inset-4 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                    <img
-                      src="/binisha.jpg"
-                      alt="Binisha"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+              {/* Gradient Ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-orange-400 via-orange-300 to-orange-200 blur-sm"></div>
+
+              {/* Image Container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <img
+                  src="/binisha.jpeg"
+                  alt="Binisha Chapagain"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Floating Tech Badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white shadow-md rounded-full px-3 py-1 text-sm font-medium">
+                AI/ML
+              </div>
+
+              <div className="absolute -bottom-6 -right-4 bg-white shadow-md rounded-full px-3 py-1 text-sm font-medium">
+                Django
               </div>
             </div>
           </motion.div>
