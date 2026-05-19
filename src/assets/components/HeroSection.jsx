@@ -42,7 +42,7 @@ const HeroSection = () => {
               </h1>
 
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mt-2">
-                AI/ML Engineer & Full-Stack Developer
+                Aspiring AI/ML Engineer & Full-Stack Developer
               </h2>
 
               <p className="text-base sm:text-lg text-gray-600 mt-3 max-w-xl">

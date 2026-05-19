@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Grid3X3, Zap } from "lucide-react";
+import { Globe, Grid3X3, Zap } from "lucide-react";
 
 // Services Section Component
 const ServicesSection = () => {
@@ -64,10 +64,10 @@ const ServicesSection = () => {
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <button className="text-orange-400 font-medium flex items-center space-x-2 hover:space-x-3 transition-all">
+              {/* <button className="text-orange-400 font-medium flex items-center space-x-2 hover:space-x-3 transition-all">
                 <span>Learn more</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </button> */}
             </motion.div>
           ))}
         </div>
